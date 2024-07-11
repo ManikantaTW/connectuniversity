@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>Home Page | Connected University</title>
+  <link rel="icon" type="image/x-icon" href="./one.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -45,6 +46,7 @@
             <div class="nav-wrapper">
             <div class="navbar-1">
               <a href="#loadmainpage">
+                <!--<img src="./one.ico" class="logo-1"/>-->
                 <img src="./logo.png" class="logo" />
               </a></div>
             <nav class="navbar-2">
@@ -322,57 +324,67 @@ document.querySelector('#h4tag').innerHTML= text;
       
       <form id="contact-form" class="form-horizontal" role="form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHs000006oueE" method="POST">
          
-<input type=hidden name="oid" value="00DHs000006oueE">
-<input type=hidden name="retURL" value="https://rm.edu/">
+        <input type=hidden name="oid" value="00DHs000006oueE">
+        <input type=hidden name="retURL" value="https://rm.edu/">
 
       
   
-        <input type="hidden" name="debug" value=1>                             
-<input type="hidden" name="debugEmail" value="rmu-sf@prudentconsulting.com">  
+        <!-- <input type="hidden" name="debug" value=1>                             
+        <input type="hidden" name="debugEmail" value="rmu-sf@prudentconsulting.com">   -->
 
 <div class="form-group">
   <div class="col-sm-12">
-    <input type="text" class="form-control" id="first_name" placeholder="First Name" name="first_name" value="" required>
+    <label for="first_name">First Name</label>
+    <input type="text" class="form-control" id="first_name" placeholder="First Name" name="first_name" required>
   </div>
 </div>
 
         <div class="form-group">
           <div class="col-sm-12">
-            <input type="text" class="form-control" id="last_name" placeholder="Last Name" name="last_name" value="" required>
+            <label for="first_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" placeholder="Last Name" name="last_name" required>
           </div>
         </div>
 
         <div class="form-group">
           <div class="col-sm-12">
-            <input type="text" class="form-control" id="company" placeholder="company" name="company" value="" required>
+            <label for="first_name">Company</label>
+            <input type="text" class="form-control" id="company" placeholder="Company" name="company" >
           </div>
         </div>
 
         <div class="form-group">
           <div class="col-sm-12">
-            <input type="text" class="form-control" id="city" placeholder="city" name="city" value="" required>
+            <label for="first_name">CIty</label>
+            <input type="text" class="form-control" id="city" placeholder="City" name="city" value="">
           </div>
         </div>
 
         <div class="form-group">
           <div class="col-sm-12">
-            <input type="text" class="form-control" id="state" placeholder="state" name="state" value="" required>
+            <label for="first_name">State</label>
+            <input type="text" class="form-control" id="state" placeholder="State" name="state" value="">
           </div>
         </div>
 
         <div class="form-group">
           <div class="col-sm-12">
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+            <label for="first_name">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="" required>
+
           </div>
         </div>
 
         
-  
-        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+        <label for="Message">Message</label>
+        <textarea class="form-control"  placeholder="Message" name="description" required></textarea>
         
        <!--- <button class="send-button" id="submit" type="submit" value="SEND">SEND
         </button>-->
+        
+        
         <input type="submit" name="submit">
+  
       </form>
       
     <!-- Left contact page --> 
@@ -413,12 +425,6 @@ document.querySelector('#h4tag').innerHTML= text;
     
   </section>  
     <script>
-  document.querySelector('#contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.target.elements.name.value = '';
-    e.target.elements.email.value = '';
-    e.target.elements.message.value = '';
-  });
 
 
 </script>
