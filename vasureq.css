@@ -988,10 +988,44 @@ hr {
 
   .element-widget
   {
-    widgets-spacing: 1rem 1rem;
-    swiper-theme-color: #000;
-    swiper-navigation-size: 44px;
-    swiper-pagination-bullet-size: 6px;
-    swiper-pagination-bullet-horizontal-gap: 6px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    
   }
-  
+
+  /*--------------- tution&fees---------------*/
+
+  .tu-table
+  {
+   
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+  }
+
+  .tu-table , .tu-th, .tu-td 
+  {
+    border: 1px solid #ddd;
+  }
+
+  .tu-th, .tu-td 
+  {
+    padding: 8px;
+    text-align: left;
+}
+.tu-th
+{
+background-color: #f2f2f2;
+}
+.tu-note
+{
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+.tu-container
+{
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
