@@ -1045,6 +1045,27 @@ thead .tu-trow {
   color: lightblue;
 }
 
+.form-group {
+  width: calc(50% - 12px);
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+.form-group:nth-child(2n) {
+  margin-right: 0;
+}
+
+.form-group--full {
+  width: 100%;
+  margin-right: 0;
+}
+
+.form-group label {
+  color: white;
+  padding-bottom: 5px;
+}
+
 @media screen and (max-width: 569px) {
 
   .direct-contact-container, .form-wrapper {
