@@ -1052,7 +1052,7 @@ thead .tu-trow {
   margin-bottom: 15px;
 }
 
-.form-group:nth-child(2n) {
+.form-group:nth-child(2n+1) {
   margin-right: 0;
 }
 
