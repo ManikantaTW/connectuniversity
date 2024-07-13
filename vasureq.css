@@ -1066,6 +1066,44 @@ thead .tu-trow {
   padding-bottom: 5px;
 }
 
+.footer {
+  padding: 35px 20px;
+  border-top: 1px solid white;
+  background-color: rgb(0, 87, 130);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link-list {
+  margin: 0 8px;
+  list-style: none;
+}
+
+.footer-link {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.footer-link-list::after {
+  content: ' ';
+  border: 1px solid #ddd;
+  right: -8px;
+  position: relative;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  color: white;
+  display: block;
+  text-align: center;
+}
+
 @media screen and (max-width: 569px) {
 
   .direct-contact-container, .form-wrapper {
