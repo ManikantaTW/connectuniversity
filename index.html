@@ -320,7 +320,8 @@ document.querySelector('#h4tag').innerHTML= text;
     
     <div class="contact-wrapper">
     
-    <!-- Left contact page --> 
+    <!-- Left contact page 
+    https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHs000006oueE--> 
       
       <form id="contact-form" class="form-horizontal" role="form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHs000006oueE" method="POST">
         <input type=hidden name="oid" value="00DHs000006oueE">
@@ -392,10 +393,45 @@ document.querySelector('#h4tag').innerHTML= text;
           <div class="col-sm-12">
             <label for="picklist">Picklist</label>
             <select class="form-control" id="00NHs00000siTeQ" placeholder="Picklist" name="00NHs00000siTeQ" value="" required>
-              <option value="012Hs000000XqskIAC">Health Sciences</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+              <option value="None">--None--</option>
+              <option value="Health Sciences">Health Sciences</option>
+              <option value="Occupational Therapy">Occupational Therapy</option>-1
+              <option value="Physical Therapy">Physical Therapy</option>
+              <option value="Physician Assistant">Physician Assistant</option>
+              <option value="Speech Language Pathology">Speech Language Pathology</option>
+              <option value="Nursing">Nursing</option>
+              <option value="Optometry">Optometry</option>
+              <option value="Counseling Assistant">Counseling Assistant</option>
+              <option value="High School Program Assistant">High School Program Assistant</option>
+              <option value="BA Business Administration Assistant">BA Business Administration Assistant</option>
+              <option value="BA Comparative Literature Assistant">BA Comparative Literature Assistant</option>
+              <option value="BA English">BA English</option>
+              <option value="BA French Studies">BA French Studies</option>
+              <option value="BA History">BA History</option>
+              <option value="BS Applied Physics">BS Applied Physics</option>
+              <option value="BSBA MIS">BSBA MIS</option>
+              <option value="BS Biology">BS Biology</option>
+              <option value="BS Chemistry">BS Chemistry</option>
+              <option value="BS Communications">BS Communications</option>
+              <option value="BS Economics">BS Economics</option> -1
+              <option value="BS Engineering">BS Engineering</option>
+              <option value="BS Environmental Science">BS Environmental Science</option>
+              <option value="BS Mathematics">BS Mathematics</option>
+              <option value="BS Physics">BS Physics</option>
+              <option value="Cyber Security Certificate">Cyber Security Certificate</option>
+              <option value="Cyber Security Certificate Curriculum Planning">Cyber Security Certificate Curriculum Planning</option>
+              <option value="BA Theater">BA Theater</option>
+              <option value="Elementary School Program">Elementary School Program</option>
+              <option value="MS Applied Mathematics">MS Applied Mathematics</option>
+              <option value="PhD Chemistry">PhD Chemistry</option>
+              <option value="PhD English Literature">PhD English Literature</option>
+              <option value="PhD Physics">PhD Physics</option>
+              <option value="Promise Scholars">Promise Scholars</option>
+              <option value="MA English Literature ">MA English Literature</option>
+              <option value="MA History ">MA History</option>
+              <option value="Middle School Program ">Middle School Program</option>
+              <option value="Pre-School Program ">Pre-School Program</option>
+              <option value="Undeclared ">Undeclared</option>
             </select>
           </div>
         </div>
@@ -410,6 +446,11 @@ document.querySelector('#h4tag').innerHTML= text;
         
         <input type="submit" name="submit" class="form-submit">
       </form>
+
+      <!-- <div id="thank_you">
+        <p>Thanks for filling out the form!</p>
+        <button data-dismiss="true" class="close-button">Close</button>
+   </div> -->
       
     <!-- Left contact page --> 
       
@@ -488,6 +529,18 @@ function showLinks (event) {
     activeList = {ele:targetElem, clas: targetElemClass, trigger: event.currentTarget}; 
     targetElem.classList.add(`${targetElemClass}--active`);
 }
+
+  const form = document.querySelector('form');
+  form.addEventListener('submit', () => {
+    window.sessionStorage.setItem('formSubmitted', true);
+  });
+
+  const checkFormSubmit = window.sessionStorage.getItem('formSubmitted');
+  if(checkFormSubmit) {
+    alert('Thank you for submitting the form!');
+    window.sessionStorage.removeItem('formSubmitted');
+  }
+
 }
 setTimeout(() => main(), 100);
 
